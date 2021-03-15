@@ -3,7 +3,7 @@
       <div class="navbar">
         <div class="menu">
           <h3 class="logo">Brand<span>Name</span></h3>
-          <div v-on:click="foo" class="hamburger-menu">
+          <div v-on:click="menu_toggle" class="hamburger-menu">
             <div class="bar"></div>
           </div>
         </div>
@@ -51,7 +51,7 @@
 export default {
   name: 'Navbar',
   methods : {
-    foo : function (){
+    menu_toggle : function (){
       const hamburger_menu = document.querySelector(".hamburger-menu");
       const container = document.querySelector(".container");
       container.classList.toggle("active");
